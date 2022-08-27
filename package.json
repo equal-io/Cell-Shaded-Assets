@@ -1,5 +1,8 @@
 {
-  "name": "Cell-Shaded-Assets",
+  "name": "@equal-io/Cell-Shaded-Assets",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/equal-io"
+  },
   "version": "0.0.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
