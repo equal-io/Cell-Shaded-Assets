@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "./Button";
 
 export default {
-  title: "Cell Shaded Library/Button",
+  title: "Cell Shaded Library/UI/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 

@@ -1,0 +1,61 @@
+.orb-container {
+  $background_color: rgb(208,227,253);
+  $circumference: 250px;
+  $scale: .095;
+  position: relative;
+  height: $circumference + $circumference * $scale + 100px;
+  width: $circumference + $circumference * $scale + 100px;
+
+  .orb-glow {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background: radial-gradient(darken($background_color, 40%), lighten($background_color, 10%));
+    border: $circumference * $scale/2 solid lighten($background_color, 30%);
+    border-radius: 50%;
+    height: $circumference + $circumference * $scale;
+    width: $circumference + $circumference * $scale;
+    box-shadow: inset 0 0 50px lighten($background_color, 5%), 0 0 40px lighten($background_color, 5%);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transform-origin: center;
+      height: $circumference + $circumference * $scale;
+      width: $circumference + $circumference * $scale;
+      border-radius: 50%;
+      z-index: 40;
+      background: radial-gradient(circle at 0%, rgba(255,255,255,0.23) 0%,rgba(255,255,255,0.23) 70%,rgba(255,255,255,0) 71%,rgba(255,255,255,0) 100%);
+    }
+
+    .orb-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 30;
+      width: $circumference;
+      height: $circumference;
+      border-radius: 50%;
+      background-color: $background_color;
+      box-shadow: inset 0 30px 100px lighten($background_color, 15%), 0 0 20px lighten($background_color, 5%);
+
+      svg {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+
+}
+
+
