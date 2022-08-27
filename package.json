@@ -1,13 +1,26 @@
 {
   "name": "Cell-Shaded-Assets",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:equal-io/Cell-Shaded-Assets.git",
   "author": "Equalio <equal.io.systems@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.4.0",
     "@types/react": "^18.0.17",
     "react": "^18.2.0",
+    "rollup": "^2.78.1",
+    "rollup-plugin-dts": "^4.2.2",
     "typescript": "^4.8.2"
+  },
+  "scripts": {
+    "rollup": "rollup -c"
   }
 }
