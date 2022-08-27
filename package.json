@@ -1,0 +1,13 @@
+{
+  "name": "Cell-Shaded-Assets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:equal-io/Cell-Shaded-Assets.git",
+  "author": "Equalio <equal.io.systems@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "react": "^18.2.0",
+    "typescript": "^4.8.2"
+  }
+}
