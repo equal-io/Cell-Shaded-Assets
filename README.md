@@ -16,7 +16,7 @@ yarn add  @equal-io/Cell-Shaded-Assets
 ```
 
 # 🛠 Usage
-Building with our library is easy and for a full breakdown of each component you can check out our extensive docs [here]().
+Building with our library is easy and for a full breakdown of each component you can check out our 📕 storybook docs [here](https://equal-io.github.io/Cell-Shaded-Assets/).
 
 A small example: 
 ```typescript jsx
