@@ -9,4 +9,4 @@ export default {
 
 const Template: ComponentStory<typeof Orb> = (args) => <Orb {...args} />;
 
-export const BlueOrb = Template.bind({});
+export const ExampleOrb = Template.bind({});
