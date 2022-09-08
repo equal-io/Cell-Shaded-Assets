@@ -10,4 +10,8 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
+  babel: async (options) => {
+    options.plugins.push("babel-plugin-inline-react-svg");
+    return options;
+  },
 };

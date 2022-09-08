@@ -1,6 +1,23 @@
 import React from "react";
-
 import styled from "styled-components";
+
+import { colorValueMapper } from "../../utils/colors";
+import { Colors } from "../../types/colors";
+
+export interface OrbProps {
+  color: Colors;
+  svg?: JSX.Element;
+}
+
+export default function Orb({ color = "blue", svg }: OrbProps): JSX.Element {
+  return (
+    <OrbContainer color={colorValueMapper[color].value}>
+      <OrbGlow>
+        <OrbCenter>{svg}</OrbCenter>
+      </OrbGlow>
+    </OrbContainer>
+  );
+}
 
 const OrbContainer = styled.div`
   --color: ${(props) => props.color};
@@ -72,36 +89,11 @@ const OrbCenter = styled.div`
     0 0 20px var(--color-primary-lighter);
 
   svg {
-    width: 80%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 `;
-
-const colorValueMapper: {
-  [key: string]: string;
-} = {
-  blue: "220,80%",
-  red: "0,80%",
-  green: "100,80%",
-  orange: "40,80%",
-  yellow: "60,80%",
-  pink: "330,80%",
-  purple: "280,80%",
-};
-
-export type OrbProps = {
-  color?: "blue" | "red" | "green" | "orange" | "yellow" | "pink" | "purple";
-};
-
-export default function Orb({ color = "blue" }: OrbProps): JSX.Element {
-  return (
-    <OrbContainer color={colorValueMapper[color]}>
-      <OrbGlow>
-        <OrbCenter></OrbCenter>
-      </OrbGlow>
-    </OrbContainer>
-  );
-}
