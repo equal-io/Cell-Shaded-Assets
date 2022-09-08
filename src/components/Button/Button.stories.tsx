@@ -22,3 +22,10 @@ ClickMe.args = {
   label: "Click Me!",
   color: "green",
 };
+
+export const Orange = Template.bind({});
+
+Orange.args = {
+  label: "I am Orange!",
+  color: "orange",
+};
