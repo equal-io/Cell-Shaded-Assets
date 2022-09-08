@@ -11,7 +11,7 @@ export interface OrbProps {
 
 export default function Orb({ color = "blue", svg }: OrbProps): JSX.Element {
   return (
-    <OrbContainer color={colorValueMapper[color].value}>
+    <OrbContainer color={colorValueMapper[color].hs}>
       <OrbGlow>
         <OrbCenter>{svg}</OrbCenter>
       </OrbGlow>
